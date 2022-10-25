@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sensitivity Converter</h1>
+    <form action="#">
+        <label for="inputSens">CSGO sens</label>
+        <input type="number" id="inputSens" step="any">
+        <label for="inputSens">Valorant sens</label>
+        <input type="text" id="outputSens">
+        <br>
+        <br>
+        <button onclick="convert()">convert</button>
+    </form>
+    <script>
+        function convert(){
+            sens1 = Number(document.getElementById("inputSens").value);
+            sens2 = Number((sens1 / 3.181818).toFixed(3));
+            document.getElementById("outputSens").value = sens2;
+        }
+    </script>
+</body>
+</html>
